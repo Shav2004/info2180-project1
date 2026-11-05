@@ -1,11 +1,358 @@
-/* Add your CSS to this file */
+
+/* INFO2180 Project 1 - Landing Page */
+
+/* General Styles */
+* {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-size: 18px;
+    color: #2D3748;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header and Navigation */
+header {
+    background-color: white;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 18px;
+    margin: 0;
+    color: #000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #6b7280;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #5A67D8;
+}
+
+/* Hero Section */
+.overview-hero {
+    background-color: #E2E8F0;
+    padding: 70px 0;
+}
+
+.overview-hero .container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.overview-hero-image,
+.overview-hero-text {
+    flex: 1;
+}
+
+.overview-hero-image img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.overview-hero-text h2 {
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #1A202C;
+}
+
+.overview-hero-text p {
+    margin: 0;
+}
+
+/* Learn About Section */
+.learn-about {
+    padding: 70px 0;
+    background-color: white;
+}
+
+.learn-about h2 {
+    font-size: 24px;
+    color: #48BB78;
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    border: 1px solid #E2E8F0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: white;
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card h3 {
+    color: #48BB78;
+    font-size: 21px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 0;
+}
+
+/* COVID-19 Testing Section */
+.testing {
+    background-color: #4A5568;
+    color: white;
+    padding: 90px 0;
+}
+
+.testing .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.testing-desciption {
+    flex: 2;
+}
+
+.testing h2 {
+    font-size: 26px;
+    margin-top: 0;
+}
+
+.testing p {
+    margin-bottom: 0;
+}
+
+.cta {
+    flex: 1;
+    text-align: center;
+}
+
+.testing .btn {
+    display: inline-block;
+    background-color: #48BB78;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.testing .btn:hover {
+    background-color: #38A169;
+}
+
+/* Recent Stories Section */
+.stories {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.stories h2 {
+    color: #5A67D8;
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.stories article {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin-bottom: 45px;
+}
+
+.stories article img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.article-body {
+    flex: 1;
+}
+
+.article-body h3 {
+    font-size: 18px;
+    color: #1A202C;
+    margin-top: 0;
+}
+
+.article-body p {
+    margin-bottom: 12px;
+}
+
+.article-body a {
+    color: #5A67D8;
+    font-weight: bold;
+}
+
+.article-body a:hover {
+    text-decoration: underline;
+}
+
+/* Newsletter Section */
+.newsletter {
+    background-color: #48BB78;
+    color: white;
+    padding: 65px 0;
+    text-align: center;
+}
+
+.newsletter .container {
+    max-width: 750px;
+}
+
+.newsletter h3 {
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.newsletter p {
+    margin-bottom: 25px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-group {
+    flex: 1;
+    max-width: 350px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.newsletter .btn {
+    background-color: #5A67D8;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.newsletter .btn:hover {
+    background-color: #434190;
+}
+
+.message {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #4A5568;
+    color: white;
+    padding: 25px 0;
+}
+
+footer p {
     margin: 0;
     font-size: 16px;
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 960px;
-    width: 100%;
+/* Responsive Layout */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .overview-hero .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .testing .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .stories article {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+
+    .form-group {
+        width: 100%;
+    }
 }
